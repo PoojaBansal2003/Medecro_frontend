@@ -1,0 +1,85 @@
+/* src/components/ParallaxComponent.css */
+.parallax-container {
+    position: relative;
+    overflow: hidden;
+    min-height: 150vh; /* Increased minimum height */
+}
+
+.parallax-background {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 800px; /* Increased height to make the image go down more */
+    background-image: url('../assets/background.avif'); 
+    background-size: cover;
+    background-position: center;
+    transition: transform 0.6s linear;
+}
+
+.content {
+    position: relative;
+    z-index: 1;
+    background: rgba(255, 255, 255, 0.8);
+    padding: 20px;
+    margin-top: 150vh; /* Increased margin-top to push content down further */
+}
+
+/* Responsive adjustments */
+@media (max-width: 1200px) {
+    .parallax-container {
+        min-height: 130vh; /* Adjusted height for large tablets and small desktops */
+    }
+
+    .parallax-background {
+        height: 700px; /* Adjusted background height */
+    }
+
+    .content {
+        margin-top: 130vh; /* Adjusted margin-top */
+    }
+}
+
+@media (max-width: 992px) {
+    .parallax-container {
+        min-height: 120vh; /* Adjusted height for tablets */
+    }
+
+    .parallax-background {
+        height: 600px; /* Adjusted background height */
+    }
+
+    .content {
+        margin-top: 120vh; /* Adjusted margin-top */
+    }
+}
+
+@media (max-width: 768px) {
+    .parallax-container {
+        min-height: 100vh; /* Adjusted height for small tablets and large smartphones */
+    }
+
+    .parallax-background {
+        height: 500px; /* Adjusted background height */
+    }
+
+    .content {
+        margin-top: 100vh; /* Adjusted margin-top */
+        padding: 15px; /* Adjusted padding for smaller screens */
+    }
+}
+
+@media (max-width: 576px) {
+    .parallax-container {
+        min-height: 90vh; /* Adjusted height for smartphones */
+    }
+
+    .parallax-background {
+        height: 400px; /* Adjusted background height */
+    }
+
+    .content {
+        margin-top: 90vh; /* Adjusted margin-top */
+        padding: 10px; /* Further adjusted padding for smaller screens */
+    }
+}
